@@ -8,5 +8,8 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "strict": true
-  }
+  },
+  "exclude": [
+    "__tests__/**/*-test.ts"
+  ]
 }

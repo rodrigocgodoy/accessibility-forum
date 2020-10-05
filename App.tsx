@@ -1,21 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
+import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 
-export default function App() {
+import AuthProvider from './src/contexts/auth';
+import Routes from './src/routes';
+
+console.disableYellowBox = true;
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Accessibility Forum</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <AuthProvider>
+        <StatusBar hidden barStyle="light-content" />
+        <Routes />
+      </AuthProvider>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
