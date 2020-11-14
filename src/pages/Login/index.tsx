@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button, View, Text } from 'react-native';
 import { StackScreenProps } from '@react-navigation/stack';
+import { Image } from 'react-native';
 import { useAuth } from '../../contexts/auth';
 
 import { Container, LoginButton, LoginText, Title, Space } from './styles.ts';
@@ -17,6 +17,10 @@ const Home = ({
 
   return (
     <Container>
+      <Image
+        source={require('../../../assets/nature.png')}
+        style={{ height: 250, width: 250, borderRadius: 125 }}
+      />
       <Title>Seja bem vindo á plataforma Accessibility Fórum</Title>
       <LoginButton
         name="facebook"

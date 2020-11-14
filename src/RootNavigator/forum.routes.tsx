@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Forum from '../pages/Forum';
-import Details from '../pages/Details';
+import Profile from '../pages/Profile';
 
 const Stack = createStackNavigator();
 
@@ -13,7 +13,7 @@ export default function Routes() {
       screenOptions={{ headerShown: false }}
     >
       <Stack.Screen name="Forum" component={Forum} />
-      <Stack.Screen name="Details" component={Details} />
+      <Stack.Screen name="Profile" component={Profile} />
     </Stack.Navigator>
   );
 }

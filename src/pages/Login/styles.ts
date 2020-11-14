@@ -29,7 +29,6 @@ export const Space = styled.View`
 
 export const Title = styled.Text`
   font-size: 40px;
-  font-family: OpenSans-Regular;
   font-weight: bold;
   color: #0008;
   font-size: 18px;
